@@ -1,0 +1,59 @@
+// import React from "react";
+// import { useState } from "react";
+// import { Form, Button, Card } from "react-bootstrap";
+
+// export default function Search() {  
+    
+
+//     const api = {
+//       key: "8973477f",
+//       base: "http://www.omdbapi.com/",
+//     };
+//   const [query, setQuery] = useState("");
+//   const [movies, setMovies] = useState([]);
+
+//   let dataArray = [];
+//   const search = (e) => {
+//     e.preventDefault();
+//    return fetch(api.base + "?t=" + query + "&apikey=" + api.key)      
+//     .then((response) => response.json())
+//     .then((data) => {  
+//         console.log(data);       
+//        setMovies(data);
+//         setQuery("");
+//         })
+       
+//     }
+   
+//   return (
+//     <div>
+//       <Form onSubmit={search}>
+//         <Form.Group controlId="formBasicEmail">
+//           <Form.Control
+//             type="text"
+//             placeholder="Search..."
+//             onChange={(e) => setQuery(e.target.value)}
+//             value={query}
+//           />
+//         </Form.Group>
+//         <Button variant="primary" type="submit">
+//           Submit
+//         </Button>
+//       </Form>   
+//         <div>
+//             {this.movies.map(x => (
+//                 <h1>{x.Title}</h1>
+//             )
+
+                
+//                 )}
+//         </div>
+//     </div>
+//     // <input
+//     // type="text"
+//     // onChange={e => setQuery(e.target.value)}
+//     // value={query}
+//     // onKeyPress={search}
+//     // />
+//   );
+// }
