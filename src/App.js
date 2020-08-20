@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import axios from "axios";
-import Header from "./components/header";
+import Header from "./components/Header";
 import Search from "./components/Search";
 import Table from "./components/Table";
 import Pagination from "./components/Pagination";
@@ -30,7 +30,7 @@ function App() {
   
   
   const search = async (e) => {
-    if (e.key === "Enter") {
+    if (e.key === "Enter") {      
        await axios.get(url + "&s="+  state.query + "&plot=full" , {
          params:{
            _limit:100
@@ -65,21 +65,27 @@ function App() {
     <Router>
       <div className="App">
         
-        <Header />
-        <Search handleInput={handleInput} search={search}/>
-        <Table results={moviePost}  />
+        <Header />        
+        <Route path="/" exact
+        render= {(props) => <Search handleInput={handleInput} search={search} /> }
+        />
         
-        <Route path="/movie/:id"  component= {Movie} />
+       <Route path="/" exact render={(props) => <Table results={moviePost}  />} />
+        
+        <Route path="/movie/:imdbID" 
+        render={( {match} ) => <Movie  match={match} />} />
 
         
-        <Pagination
+       <Route path="/" exact render={(props) =><Pagination
           perPage={perPage}
           totalPage={state.results.length}
           paginate={paginate}
-        />
+        /> }  />
       </div>
     </Router>
   );
 }
+
+
 
 export default App;

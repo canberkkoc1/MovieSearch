@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Button } from "react-bootstrap";
 import {Link} from "react-router-dom";
 
-export default function Table({ results, myFun }) {
+export default function Table({ results }) {
   return (
     <section className="table-section">
       {results.map((item) => (
@@ -10,7 +10,7 @@ export default function Table({ results, myFun }) {
           <Card.Img variant="top" src={item.Poster} className="card-image" />
           <Card.Body>
             <Card.Title>
-              <Link to={`/movie/${item.imdbID}`} > {item.Title} </Link>
+              <Link to={`/movie/${item.imdbID}`}  ><h2>{item.Title}</h2>  </Link>
               </Card.Title>
             <Card.Text>
               Year = {item.Year} <br />

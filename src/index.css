@@ -28,6 +28,9 @@ code {
   cursor: pointer;
   
 }
+.table-section h2:hover{
+  color:white;
+}
 .table-section .card:hover{
   background-color: rgb(79, 83, 83);
 
@@ -63,8 +66,54 @@ code {
   display: flex;
   justify-content:center;
   align-items: center;
-  color: white;
+  color: white !important;
   margin-bottom:2rem;
   letter-spacing: 1px;
+  position: relative;  
 
+}
+
+.Header h3{
+  position: absolute;
+  left: 3rem;
+  top: 2.5rem;
+  color: white;
+}
+
+div.sections{
+  widows: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+section#movieDetailsPage{
+  position: relative;
+  width: 37rem;
+
+}
+
+section#movieDetailsPage header{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+
+section.plot{
+    width: 20%;  
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.spans{
+  color:rgb(35, 216, 140);
+}
+
+.plots{
+  font-size:1.5rem;
+  font-weight: 600;
 }

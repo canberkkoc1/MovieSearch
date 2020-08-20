@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+/* .App li{
+  list-style: none;
+  position: absolute;
+  left: 5rem;
+  top: 3rem;
+  color: #ffffff;
+  font-size: 1.2rem;
+} */
